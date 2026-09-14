@@ -1,0 +1,914 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>KRIPAGA - Online Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
+     <link rel="icon" type="image/png" href="klklk.jpeg.png">
+</head>
+
+<body>
+
+<!--HEADER-->
+
+<header class="header">
+
+    <img src="logs.jpeg.png" alt="">
+
+    <div class="logo" style="color: yellow;">
+        KRIPAGA
+    </div>
+
+    <div class="search-box">
+
+        <span>🔍</span>
+
+        <input type="text"
+               id="searchInput"
+               placeholder="Search for Products, Brands and More">
+
+    </div>
+
+    <button class="account" onclick="window.location.href='profile.html'">
+    👤 Account ▾
+</button>
+
+<div class="more">
+    <button onclick="showMore()">More ▾</button>
+
+    <div id="moreMenu" class="more-menu">
+        <p>🏪 Become a Seller</p>
+        <p>🔔 Notification Settings</p>
+        <p>🎧 24x7 Customer Care</p>
+        <p>📢 Advertise on KRIPAGA</p>
+    </div>
+</div>
+
+    <button class="cart" style="background-color: yellow;" onclick="openCart()">
+        🛒 Cart
+        <span id="cartCount" style="background-color: #2874f0;">0</span>
+    </button>
+
+</header>
+
+
+<!-- CATEGORY -->
+
+<nav class="category-bar" style="background-color: yellow;">
+
+    <button class="category active"
+            onclick="showPage('forYou', this)">
+
+        <span class="category-icon">🛍️</span>
+        <span>For You</span>
+
+    </button>
+
+
+    <button class="category"
+            onclick="showPage('fashion', this)">
+
+        <span class="category-icon">👕</span>
+        <span>Fashion</span>
+
+    </button>
+
+
+    <button class="category"
+            onclick="showPage('mobiles', this)">
+
+        <span class="category-icon">📱</span>
+        <span>Mobiles</span>
+
+    </button>
+
+
+    <button class="category"
+            onclick="showPage('laptops', this)">
+
+        <span class="category-icon">💻</span>
+        <span>Laptop</span>
+
+    </button>
+
+</nav>
+
+
+<!-- MAIN -->
+
+<main>
+
+
+<!-- FOR YOU -->
+
+<section id="forYou" class="page active-page">
+
+    <!-- SLIDER -->
+
+    <div class="slider">
+
+        <div class="slide active-slide">
+
+
+            <div class="slide-image">
+
+                <img src="rohit.jpeg" alt="" >
+
+            </div>
+
+        </div>
+
+
+        <div class="slide" ">
+
+            
+
+            <div class="slide-image">
+
+                <img src="k.jpeg" alt="" >
+
+            </div>
+
+        </div>
+
+
+        <div class="slide">
+
+            
+
+            <div class="slide-image">
+
+                <img src="doni.jpeg" alt="" >
+
+            </div>
+
+        </div>
+
+
+        <div class="dots">
+
+            <span class="dot active-dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOP PRODUCTS -->
+
+    <section class="product-section">
+
+        <div class="section-heading">
+
+            <h2>
+                Top Picks For You
+            </h2>
+
+            <span>
+                View All →
+            </span>
+
+        </div>
+
+
+        <div class="product-row">
+
+
+            <div class="product-card">
+
+                <img src="shirt1.jpeg" alt="Shirt">
+
+                <h3>
+                    Premium Shirt
+                </h3>
+
+                <p class="price">
+                    ₹799
+                    
+                </p>
+
+                <p class="discount">
+                    38% off
+                </p>
+
+                <button onclick="addToCart(this)">
+                    Add to Cart
+                </button>
+
+                <button onclick="buyProduct(this)">
+                    BUY
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="shirt2.jpeg" alt="Shirt">
+
+                <h3>
+                    Casual Shirt
+                </h3>
+
+                <p class="price">
+                    ₹899
+                    
+                </p>
+
+                <p class="discount">
+                    40% off
+                </p>
+
+                <button onclick="addToCart(this)">
+                    Add to Cart
+                </button>
+
+                <button onclick="buyProduct(this)">
+                    BUY
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="pant1.jpeg" alt="Pant">
+
+                <h3>
+                    Classic Pant
+                </h3>
+
+                <p class="price">
+                    ₹999
+                    
+                </p>
+
+                <p class="discount">
+                    37% off
+                </p>
+
+                <button onclick="addToCart(this)">
+                    Add to Cart
+                </button>
+
+                <button onclick="buyProduct(this)">
+                    BUY
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="hoodie1.webp" alt="Hoodie">
+
+                <h3>
+                    Stylish Hoodie
+                </h3>
+
+                <p class="price">
+                    ₹1,199
+                    
+                </p>
+
+                <p class="discount">
+                    40% off
+                </p>
+
+                <button onclick="addToCart(this)">
+                    Add to Cart
+                </button>
+
+                <button onclick="buyProduct(this)">
+                    BUY
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="phone1.jpeg" alt="Mobile">
+
+                <h3>
+                    KRIPAGA Mobile
+                </h3>
+
+                <p class="price">
+                    ₹12,999
+                </p>
+
+                <p class="discount">
+                    20% off
+                </p>
+
+                <button onclick="addToCart(this)">
+                    Add to Cart
+                </button>
+
+                <button onclick="buyProduct(this)">
+                    BUY
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="lappy1.jpeg" alt="Laptop">
+
+                <h3>
+                    KRIPAGA Laptop
+                </h3>
+
+                <p class="price">
+                    ₹38,999
+                </p>
+
+                <p class="discount">
+                    15% off
+                </p>
+
+                <button onclick="addToCart(this)">
+                    Add to Cart
+                </button>
+
+                <button onclick="buyProduct(this)">
+                    BUY
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- FASHION -->
+
+<section id="fashion" class="page">
+
+    <div class="page-title">
+
+        <h1>Fashion</h1>
+
+        <p>Choose your style</p>
+
+    </div>
+
+
+    <!-- SHIRTS -->
+
+    <section class="fashion-section">
+
+        <div class="fashion-heading">
+
+            <h2>Shirts</h2>
+
+            <span>View All →</span>
+
+        </div>
+
+
+        <div class="product-row">
+
+
+            <div class="product-card">
+
+                <img src="shirt1.jpeg">
+
+                <h3>Shirt 1</h3>
+
+                <p class="price">
+                    ₹799 
+                </p>
+
+                <p class="discount">38% off</p>
+
+                <button onclick="addToCart(this)">
+                    Add to Cart
+                </button>
+
+                <button onclick="buyProduct(this)">
+                    BUY
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="shirt2.jpeg">
+
+                <h3>Shirt 2</h3>
+
+                <p class="price">
+                    ₹849 
+                </p>
+
+                <p class="discount">39% off</p>
+
+                <button onclick="addToCart(this)">
+                    Add to Cart
+                </button>
+
+                <button onclick="buyProduct(this)">
+                    BUY
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="shirt3.jpeg">
+
+                <h3>Shirt 3</h3>
+
+                <p class="price">
+                    ₹899 
+                </p>
+
+                <p class="discount">40% off</p>
+
+                <button onclick="addToCart(this)">
+                    Add to Cart
+                </button>
+
+                <button onclick="buyProduct(this)">
+                    BUY
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="shirt4.jpeg">
+
+                <h3>Shirt 4</h3>
+
+                <p class="price">
+                    ₹949 
+                </p>
+
+                <p class="discount">41% off</p>
+
+                <button onclick="addToCart(this)">
+                    Add to Cart
+                </button>
+
+                <button onclick="buyProduct(this)">
+                    BUY
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="shirt5.jpeg">
+
+                <h3>Shirt 5</h3>
+
+                <p class="price">
+                    ₹999 
+                </p>
+
+                <p class="discount">41% off</p>
+
+                <button onclick="addToCart(this)">
+                    Add to Cart
+                </button>
+
+                <button onclick="buyProduct(this)">
+                    BUY
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="shirt6.jpeg">
+
+                <h3>Shirt 6</h3>
+
+                <p class="price">
+                    ₹1,049 
+                </p>
+
+                <p class="discount">42% off</p>
+
+                <button onclick="addToCart(this)">
+                    Add to Cart
+                </button>
+
+                <button onclick="buyProduct(this)">
+                    BUY
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PANTS -->
+
+    <section class="fashion-section">
+
+        <div class="fashion-heading">
+
+            <h2>Pants</h2>
+
+            <span>View All →</span>
+
+        </div>
+
+
+        <div class="product-row">
+
+
+            <div class="product-card">
+                <img src="pant1.jpeg">
+                <h3>Pant 1</h3>
+                <p class="price">₹999</p>
+                <p class="discount">37% off</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+                <button onclick="buyProduct(this)">BUY</button>
+            </div>
+
+
+            <div class="product-card">
+                <img src="pant2.jpeg">
+                <h3>Pant 2</h3>
+                <p class="price">₹1,099 </p>
+                <p class="discount">35% off</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+                <button onclick="buyProduct(this)">BUY</button>
+            </div>
+
+
+            <div class="product-card">
+                <img src="pant3.jpeg">
+                <h3>Pant 3</h3>
+                <p class="price">₹1,199 </p>
+                <p class="discount">33% off</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+                <button onclick="buyProduct(this)">BUY</button>
+            </div>
+
+
+            <div class="product-card">
+                <img src="pant4.jpeg">
+                <h3>Pant 4</h3>
+                <p class="price">₹1,249 </p>
+                <p class="discount">34% off</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+                <button onclick="buyProduct(this)">BUY</button>
+            </div>
+
+
+            <div class="product-card">
+                <img src="pant5.jpeg">
+                <h3>Pant 5</h3>
+                <p class="price">₹1,299 </p>
+                <p class="discount">35% off</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+                <button onclick="buyProduct(this)">BUY</button>
+            </div>
+
+
+            <div class="product-card">
+                <img src="pant6.jpeg">
+                <h3>Pant 6</h3>
+                <p class="price">₹1,399 </p>
+                <p class="discount">33% off</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+                <button onclick="buyProduct(this)">BUY</button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOODIES -->
+
+    <section class="fashion-section">
+
+        <div class="fashion-heading">
+
+            <h2>Hoodies</h2>
+
+            <span>View All →</span>
+
+        </div>
+
+
+        <div class="product-row">
+
+
+            <div class="product-card">
+                <img src="hoodie1.webp">
+                <h3>Hoodie 1</h3>
+                <p class="price">₹1,199 </p>
+                <p class="discount">40% off</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+                <button onclick="buyProduct(this)">BUY</button>
+            </div>
+
+
+            <div class="product-card">
+                <img src="hoodie2.webp">
+                <h3>Hoodie 2</h3>
+                <p class="price">₹1,299 </p>
+                <p class="discount">38% off</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+                <button onclick="buyProduct(this)">BUY</button>
+            </div>
+
+
+            <div class="product-card">
+                <img src="hoodie3.webp">
+                <h3>Hoodie 3</h3>
+                <p class="price">₹1,399 </p>
+                <p class="discount">36% off</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+                <button onclick="buyProduct(this)">BUY</button>
+            </div>
+
+
+            <div class="product-card">
+                <img src="hoodie4.jpeg">
+                <h3>Hoodie 4</h3>
+                <p class="price">₹1,499 </p>
+                <p class="discount">35% off</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+                <button onclick="buyProduct(this)">BUY</button>
+            </div>
+
+
+            <div class="product-card">
+                <img src="hoodie5.jpeg">
+                <h3>Hoodie 5</h3>
+                <p class="price">₹1,599 </p>
+                <p class="discount">33% off</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+                <button onclick="buyProduct(this)">BUY</button>
+            </div>
+
+
+            <div class="product-card">
+                <img src="hoodie6.jpeg">
+                <h3>Hoodie 6</h3>
+                <p class="price">₹1,699 </p>
+                <p class="discount">32% off</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+                <button onclick="buyProduct(this)">BUY</button>
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- > MOBILE PAGE -->
+
+<section id="mobiles" class="page">
+
+    <div class="page-title">
+
+        <h1>Mobiles</h1>
+
+        <p>Latest smartphones and best deals</p>
+
+    </div>
+
+
+    <div class="big-product-grid">
+
+
+        <div class="product-card">
+            <img src="phone1.jpeg">
+            <h3>KRIPAGA Mobile 1</h3>
+            <p class="price">₹12,999</p>
+            <p class="discount">20% off</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <button onclick="buyProduct(this)">BUY</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="phone2.jpeg">
+            <h3>KRIPAGA Mobile 2</h3>
+            <p class="price">₹14,999</p>
+            <p class="discount">18% off</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <button onclick="buyProduct(this)">BUY</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="phone3.jpeg">
+            <h3>KRIPAGA Mobile 3</h3>
+            <p class="price">₹16,999</p>
+            <p class="discount">15% off</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <button onclick="buyProduct(this)">BUY</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="phone4.jpeg">
+            <h3>KRIPAGA Mobile 4</h3>
+            <p class="price">₹18,999</p>
+            <p class="discount">12% off</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <button onclick="buyProduct(this)">BUY</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="phone5.jpeg">
+            <h3>KRIPAGA Mobile 5</h3>
+            <p class="price">₹19,999</p>
+            <p class="discount">20% off</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <button onclick="buyProduct(this)">BUY</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="phone6.jpeg">
+            <h3>KRIPAGA Mobile 6</h3>
+            <p class="price">₹21,999</p>
+            <p class="discount">18% off</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <button onclick="buyProduct(this)">BUY</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="phone7.jpeg">
+            <h3>KRIPAGA Mobile 7</h3>
+            <p class="price">₹23,999</p>
+            <p class="discount">15% off</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <button onclick="buyProduct(this)">BUY</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="phone8.jpeg">
+            <h3>KRIPAGA Mobile 8</h3>
+            <p class="price">₹25,999</p>
+            <p class="discount">12% off</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <button onclick="buyProduct(this)">BUY</button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--  LAPTOP PAGE  -->
+
+<section id="laptops" class="page">
+
+    <div class="page-title">
+
+        <h1>Laptops</h1>
+
+        <p>
+            Powerful laptops for work, study and entertainment
+        </p>
+
+    </div>
+
+
+    <div class="big-product-grid">
+
+
+        <div class="product-card">
+            <img src="lappy1.jpeg">
+            <h3>KRIPAGA Laptop 1</h3>
+            <p class="price">₹38,999</p>
+            <p class="discount">15% off</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <button onclick="buyProduct(this)">BUY</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="lappy2.jpeg">
+            <h3>KRIPAGA Laptop 2</h3>
+            <p class="price">₹42,999</p>
+            <p class="discount">17% off</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <button onclick="buyProduct(this)">BUY</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="lappy3.jpeg">
+            <h3>KRIPAGA Laptop 3</h3>
+            <p class="price">₹48,999</p>
+            <p class="discount">20% off</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <button onclick="buyProduct(this)">BUY</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="lappy4.jpeg">
+            <h3>KRIPAGA Laptop 4</h3>
+            <p class="price">₹55,999</p>
+            <p class="discount">18% off</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <button onclick="buyProduct(this)">BUY</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="lappy5.jpeg">
+            <h3>KRIPAGA Laptop 5</h3>
+            <p class="price">₹58,999</p>
+            <p class="discount">15% off</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <button onclick="buyProduct(this)">BUY</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="lappy6.jpeg">
+            <h3>KRIPAGA Laptop 6</h3>
+            <p class="price">₹62,999</p>
+            <p class="discount">17% off</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <button onclick="buyProduct(this)">BUY</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="lappy7.jpeg">
+            <h3>KRIPAGA Laptop 7</h3>
+            <p class="price">₹68,999</p>
+            <p class="discount">20% off</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <button onclick="buyProduct(this)">BUY</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="lappy8.jpeg">
+            <h3>KRIPAGA Laptop 8</h3>
+            <p class="price">₹72,999</p>
+            <p class="discount">18% off</p>
+            <button onclick="addToCart(this)">Add to Cart</button>
+            <button onclick="buyProduct(this)">BUY</button>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="king">
+
+    <h3>KRIPAGA</h3>
+
+    <p>
+        FASHION AND ELECTRONICS ONLINE STORE
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
